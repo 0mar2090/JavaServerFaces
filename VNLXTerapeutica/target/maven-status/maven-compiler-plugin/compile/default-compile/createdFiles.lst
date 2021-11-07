@@ -1,0 +1,10 @@
+fr\jsf\Assets\SessionAssets.class
+fr\jsf\Beans\Login.class
+fr\jsf\Dao\LoginDAO.class
+fr\jsf\Dao\EmailDAO.class
+pe\com\omar\terapeuticavnlx\resources\JavaEE8Resource.class
+fr\jsf\Authorization\Autorizacion.class
+fr\jsf\Beans\EmailBeans.class
+pe\com\omar\terapeuticavnlx\JAXRSConfiguration.class
+pe\omar\com\ConfigrationJSF\ConfigrationJSF.class
+fr\jsf\Assets\Conexion.class

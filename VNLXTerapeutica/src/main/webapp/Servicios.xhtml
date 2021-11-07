@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Servicios de Consultas Suna y Reniec | VNLX </title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <script src="assets/js/popper.min.js"></script>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus icon'></i>
+                <div class="logo_name">VNLX</div>
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <i class='bx bx-search' ></i>
+                    <input type="text" id="Buscar" placeholder="Search..."/>
+                    <span class="tooltip">Search</span>
+
+                </li>
+                <li>
+                    <a href="success.xhtml">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="Servicios.xhtml">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Servicios</span>
+                    </a>
+                    <span class="tooltip">Sunat Reniec</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-chat' ></i>
+                        <span class="links_name">Messages</span>
+                    </a>
+                    <span class="tooltip">Messages</span>
+                </li>
+
+                <li>
+                    <a href="Contacto.xhtml">
+                        <i class='bx bx-chat' ></i>
+                        <span class="links_name">Contacto</span>
+                    </a>
+                    <span class="tooltip">Contactanos</span>
+                </li>
+                <li>
+                    <a href="Ubicacion.xhtml">
+                        <i class='bx bx-map' ></i>
+                        <span class="links_name">Ubicacion</span>
+                    </a>
+                    <span class="tooltip">Nuestra Ubicacion</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog' ></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tooltip">Setting</span>
+                </li>
+
+                <li class="profile">
+                    <div class="profile-details">
+                        <img src="assets/img/profile.jpg" alt="profileImg"/>
+                        <div class="name_job">
+                            <div class="job" >WELCOME</div>
+                            <div class="name">#{login.usuario}</div>
+                        </div>
+                    </div>
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                </li>
+
+            </ul>
+        </div>
+        <section class="home-section">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h:form>
+                        <a style="font-size: 22px; color: black">TERAPEUTICA VNLX</a>
+                        <h:commandLink style=" float: right;" action="#{login.logout}" value="SALIR"></h:commandLink>
+                        <i class='bx bx-log-out' id="log_out" style="float: right; padding-top: 5px"></i>
+                        <a style=" float: right;">(#{login.usuario})</a>
+                        <a style=" float: right;">User</a>
+                        <i class='bx bx-user' id="log_out" style="float: right; padding-top: 4px "></i>
+                    </h:form>
+                </div>
+                <div class="card-header py-3">
+                    <h6 style="text-align: center;font-size: 22px;" class="m-0 font-weight-bold text-primary">CONSULTA SUNAT</h6>
+                </div>
+                <div class="card-body">
+                    <div class="navbar navbar-light bg-light" id="ingreso-ruc">
+                        <input type="text" name="" id="ruc" class="form-control mr-sm-2" placeholder="Ingresa Numero Ruc"
+                               aria-describedby="helpId" maxlength="11"/>
+                        <button style="text-align: center;" class="btn btn-primary mb-3" type="submit" id="btnBuscar">Buscar</button>
+                    </div>
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <main>
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <table class="table table-bordered" id="listadoRUC">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Nombre o Razón Social</th>
+                                                            <th scope="col">Estado</th>
+                                                            <th scope="col">Condición de Domicilio</th>
+                                                            <th scope="col">Departamento</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 style="text-align: center;font-size: 22px;" class="m-0 font-weight-bold text-primary">CONSULTA
+                        RENIEC</h6>
+                </div>
+                <div class="card-body">
+                    <div class="navbar navbar-light bg-light" id="ingreso-ruc">
+                        <input type="text" name="" id="txtDni" class="form-control mr-sm-2"
+                               placeholder="Ingresa Numero Dni" aria-describedby="helpId" maxlength="11"/>
+                        <button style="text-align: center;" class="btn btn-primary mb-3" type="submit"
+                                id="buscar">Buscar</button>
+                    </div>
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <main>
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <table class="table table-bordered" id="personas">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Dni</th>
+                                                            <th scope="col">Nombre</th>
+                                                            <th scope="col">Apellido Paterno</th>
+                                                            <th scope="col">Apellido Materno</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/rucClase.js"></script>
+        <script src="assets/js/ruc.js"></script>
+        <script src="assets/js/dni.js"></script>
+    </body>
+
+</html>

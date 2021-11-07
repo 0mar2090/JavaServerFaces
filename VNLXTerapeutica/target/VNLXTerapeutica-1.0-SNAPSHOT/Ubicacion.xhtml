@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>Ubicacion | VNLX </title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <script src="assets/js/popper.min.js"></script>
+    </h:head>
+    <h:body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus icon'></i>
+                <div class="logo_name">VNLX</div>
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <i class='bx bx-search' ></i>
+                    <input type="text" id="Buscar" placeholder="Search..."/>
+                    <span class="tooltip">Search</span>
+
+                </li>
+                <li>
+                    <a href="success.xhtml">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="Servicios.xhtml">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Servicios</span>
+                    </a>
+                    <span class="tooltip">Sunat Reniec</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-chat' ></i>
+                        <span class="links_name">Messages</span>
+                    </a>
+                    <span class="tooltip">Messages</span>
+                </li>
+
+                <li>
+                    <a href="Contacto.xhtml">
+                        <i class='bx bx-chat' ></i>
+                        <span class="links_name">Contacto</span>
+                    </a>
+                    <span class="tooltip">Contactanos</span>
+                </li>
+                <li>
+                    <a href="Ubicacion.xhtml">
+                        <i class='bx bx-map' ></i>
+                        <span class="links_name">Ubicacion</span>
+                    </a>
+                    <span class="tooltip">Nuestra Ubicacion</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog' ></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tooltip">Setting</span>
+                </li>
+
+                <li class="profile">
+                    <div class="profile-details">
+                        <img src="assets/img/profile.jpg" alt="profileImg"/>
+                        <div class="name_job">
+                            <div class="job" >WELCOME</div>
+                            <div class="name">#{login.usuario}</div>
+                        </div>
+                    </div>
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                </li>
+
+            </ul>
+        </div>
+        <section class="home-section">
+            <body>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h:form>
+                            <a style="font-size: 22px; color: black">TERAPEUTICA VNLX</a>
+                            <h:commandLink style=" float: right;" action="#{login.logout}" value="SALIR"></h:commandLink>
+                            <i class='bx bx-log-out' id="log_out" style="float: right; padding-top: 5px"></i>
+                            <a style=" float: right;">(#{login.usuario})</a>
+                            <a style=" float: right;">User</a>
+                            <i class='bx bx-user' id="log_out" style="float: right; padding-top: 4px "></i>
+                        </h:form>
+                    </div>
+                    <div class="card-header py-3">
+                        <h6 style="text-align: center;font-size: 22px;" class="m-0 font-weight-bold text-primary">DASHBOARD GOOGLE MAPS</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <div style="width: 100%">
+                                    <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Terap%C3%A9utico%20VNLX+(Terapeutico%20V)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Radio en el mapa</a></iframe></div>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </section>
+
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </h:body>
+</html>
