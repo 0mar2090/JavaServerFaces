@@ -5,7 +5,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             //Ingresa a La Pagina de dniruc.apisperu.com y Crea Tu Cuenta Ahy Te Daran Tu Token Propio 
-            url: 'https://dniruc.apisperu.com/api/v1/dni/' + dni + '?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjEyMTMyODVAc2VuYXRpLnBlIn0.gvs4aBuf7bvomMfIcF1SdRN-fovWUvjHnX4Wyb3c_Zg',
+            url: 'https://dniruc.apisperu.com/api/v1/dni/' + dni + '?token=TUPROPIOTOKEN',
             dataType: 'JSON'
 
         }).done((data) => {
