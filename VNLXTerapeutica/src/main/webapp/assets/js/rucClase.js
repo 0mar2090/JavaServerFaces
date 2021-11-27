@@ -1,7 +1,7 @@
 class RUC {
     constructor(){
         //Ingresa a La Pagina de api.migoperu.pe y Crea Tu Cuenta Ahy Te Daran Tu Token Propio 
-        this.token = 'lfdCi3StYaAjEg6SW77vOSX2FxwXM2g3U9jWBzTtETcXWgaQr73X165M0vW3';
+        this.token = 'TUPROPIOTOKEN';
         this.url = 'https://api.migoperu.pe/api/v1/ruc';
     }
        
